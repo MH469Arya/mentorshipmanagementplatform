@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Dashboard - MMP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">MMP</a>
+            </div>
+            <ul>
+                <li><a href="#">My Mentees</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-content">
+            <div class="dashboard-header">
+                <h1>Mentor Dashboard</h1>
+                <button id="newSessionBtn" class="cta-button">New Session</button>
+            </div>
+
+            <section class="dashboard-section">
+                <h2>Upcoming Sessions</h2>
+                <div class="card-list">
+                    <!-- Example Session Card -->
+                    <div class="card">
+                        <h3>Code Review with Alex</h3>
+                        <p>Date: Tomorrow, 10:00 AM</p>
+                        <a href="#">View Details</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- The Modal -->
+    <div id="sessionModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Create New Session</h2>
+            <form id="newSessionForm">
+                <div class="form-group">
+                    <label for="sessionAgenda">Today's Agenda</label>
+                    <textarea id="sessionAgenda" name="sessionAgenda" rows="3" required></textarea>
+                </div>
+                <div class="form-group-inline">
+                    <div class="form-group">
+                        <label for="sessionDate">Date</label>
+                        <input type="date" id="sessionDate" name="sessionDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sessionTime">Time</label>
+                        <input type="time" id="sessionTime" name="sessionTime" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="sessionVenue">Venue / Meeting Link</label>
+                    <input type="text" id="sessionVenue" name="sessionVenue" required>
+                </div>
+                <div class="form-group">
+                    <label for="sessionGuidelines">Guidelines</label>
+                    <textarea id="sessionGuidelines" name="sessionGuidelines" rows="3"></textarea>
+                </div>
+                <button type="submit" class="cta-button">Confirm Session</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mentorship Management Platform</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

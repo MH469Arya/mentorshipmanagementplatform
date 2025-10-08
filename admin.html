@@ -23,7 +23,27 @@
     <main>
         <div class="main-content">
             <h1>Admin Dashboard</h1>
-            <p>Welcome, Admin! Here you can manage users and track progress.</p>
+            <p>Monitor all mentoring sessions, attendance, and feedback across the platform.</p>
+
+            <section class="dashboard-section">
+                <h2>All Sessions</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Agenda</th>
+                                <th>Mentee</th>
+                                <th>Date & Time</th>
+                                <th>Status</th>
+                                <th>Feedback</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-session-list">
+                            <!-- Session rows will be dynamically inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </div>
     </main>
 

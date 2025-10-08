@@ -46,10 +46,74 @@
     box-shadow: var(--shadow-sm);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+.card {
+    position: relative;
+    overflow: hidden; /* To contain the status badge */
+}
+
 .card:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
+
+.card-status {
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    transform: rotate(45deg);
+    background-color: #ccc;
+    color: white;
+    padding: 2px 30px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+.status-upcoming { background-color: #3b82f6; /* Blue */}
+.status-in-progress { background-color: #f59e0b; /* Amber */ }
+.status-completed { background-color: #10b981; /* Emerald */ }
+
+.card-actions {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    background-color: #f1f5f9; /* Slate 100 */
+    border: 1px solid var(--border-color);
+    color: var(--secondary-text-color);
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.action-btn:hover {
+    background-color: #e2e8f0; /* Slate 200 */
+    color: var(--text-color);
+}
+
+.feedback-display {
+    background-color: #f8fafc; /* Slate 50 */
+    border-left: 3px solid var(--primary-color);
+    padding: 10px;
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+}
+
 
 /* Modal Styles */
 .modal {
@@ -106,4 +170,30 @@
 
 .form-group-inline .form-group {
     flex: 1;
+}
+
+/* Admin Table Styles */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: #f8fafc; /* Slate 50 */
+    font-weight: 500;
+}
+
+tbody tr:hover {
+    background-color: #f1f5f9; /* Slate 100 */
 }
